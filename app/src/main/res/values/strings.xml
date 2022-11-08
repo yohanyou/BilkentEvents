@@ -8,6 +8,8 @@
     <string name="create">Create a new Bilkent Events account:</string>
     <string name="exampleDate">December 8th, 2022</string>
     <string name="email">Email:</string>
+    <string name="eventMonth1">Events for November:</string>
+    <string name="eventMonth2">Events for December:</string>
     <string name="forgotPassword">forgot password?</string>
     <string name="forgot">Forgot your password?</string>
     <string name="password">Password:</string>
