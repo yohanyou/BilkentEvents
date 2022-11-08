@@ -1,12 +1,17 @@
 <resources>
 
-    <string name="app_name">BilkentEvents</string>
-    <string name="bilkent_id">Bilkent ID:</string>
-    <string name="create_account">create a new account</string>
+    <string name="appName">BilkentEvents</string>
+    <string name="applyEvent">Apply for Events:</string>
+    <string name="bilkentID">Bilkent ID:</string>
+    <string name="changePassword">change password</string>
+    <string name="createAccount">create a new account</string>
     <string name="create">Create a new Bilkent Events account:</string>
+    <string name="exampleDate">December 8th, 2022</string>
     <string name="email">Email:</string>
     <string name="forgotPassword">forgot password?</string>
+    <string name="forgot">Forgot your password?</string>
     <string name="password">Password:</string>
+    <string name="todaysEvents">Today\'s Events</string>
     <string name="welcome">Welcome to Bilkent Events!</string>
 
 </resources>

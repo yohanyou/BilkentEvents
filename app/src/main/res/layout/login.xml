@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".loginPage">
 
     <TextView
         android:id="@+id/welcome"
@@ -65,7 +65,7 @@
         android:id="@+id/create_account"
         android:layout_width="150dp"
         android:layout_height="20dp"
-        android:text="@string/create_account"
+        android:text="@string/createAccount"
         android:textColor="@color/green"
         android:gravity="left"
         app:layout_constraintBottom_toBottomOf="parent"
