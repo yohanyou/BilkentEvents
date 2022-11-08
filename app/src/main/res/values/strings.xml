@@ -1,7 +1,9 @@
 <resources>
 
     <string name="app_name">BilkentEvents</string>
+    <string name="bilkent_id">Bilkent ID:</string>
     <string name="create_account">create a new account</string>
+    <string name="create">Create a new Bilkent Events account:</string>
     <string name="email">Email:</string>
     <string name="forgotPassword">forgot password?</string>
     <string name="password">Password:</string>
