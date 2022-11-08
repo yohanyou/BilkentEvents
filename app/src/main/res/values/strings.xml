@@ -1,19 +1,36 @@
 <resources>
 
+    //general purposes
     <string name="appName">BilkentEvents</string>
-    <string name="applyEvent">Apply for Events:</string>
     <string name="bilkentID">Bilkent ID:</string>
-    <string name="changePassword">change password</string>
+    <string name="email">Email:</string>
+    <string name="password">Password:</string>
+    <string name="settings">Settings:</string>
+    <string name="welcome">Welcome to Bilkent Events!</string>
+
+    //create account
     <string name="createAccount">create a new account</string>
     <string name="create">Create a new Bilkent Events account:</string>
-    <string name="exampleDate">December 8th, 2022</string>
-    <string name="email">Email:</string>
-    <string name="eventMonth1">Events for November:</string>
-    <string name="eventMonth2">Events for December:</string>
+
+    //forgot password
+    <string name="changePassword">change password</string>
     <string name="forgotPassword">forgot password?</string>
     <string name="forgot">Forgot your password?</string>
-    <string name="password">Password:</string>
+
+    //home page
+    <string name="exampleDate">December 8th, 2022</string>
     <string name="todaysEvents">Today\'s Events</string>
-    <string name="welcome">Welcome to Bilkent Events!</string>
+
+    //event organizer
+    <string name="applyEvent">Apply for Events:</string>
+    <string name="eventMonth1">Events for November:</string>
+    <string name="eventMonth2">Events for December:</string>
+
+    //settings
+    <string name="exampleName">John Doe</string>
+    <string name="logout">logout</string>
+    <string name="username">Username:</string>
+    <string name="userID">12345678</string>
+    <string name="userPassword">********</string>
 
 </resources>

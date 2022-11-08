@@ -10,7 +10,7 @@
         android:theme="@style/Theme.BilkentEvents">
 
         <activity
-            android:name=".homePage"
+            android:name=".eventOrganizer"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
