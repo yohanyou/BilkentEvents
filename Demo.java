@@ -21,8 +21,12 @@ public class Demo {
         // Do not change it
         Connection connection = DriverManager.getConnection(url,username,password);
         // Do not change it
-        Statement statement = (Statement) connection.createStatement();
-        ResultSet resultSet = statement.executeQuery();
+        Statement statement = connection.createStatement();
+        ResultSet resultSet = statement.executeQuery("select * from students");
+        while(resultSet.next()){
+            System.out.println(resultSet.getInt(1)+" "+resultSet.getString(2)+ " " + resultSet.getInt(3));
+        }
+            connection.close();
         } catch (Exception e) {
             // Do not change it
             System.out.println(e);
