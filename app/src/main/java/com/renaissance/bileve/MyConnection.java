@@ -1,2 +1,4 @@
-package com.renaissance.bileve;public class MyConnection {
+package com.renaissance.bileve;
+
+public class MyConnection {
 }

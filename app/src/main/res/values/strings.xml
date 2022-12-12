@@ -39,5 +39,6 @@
     <string name="event2">Example event | Example club | 02/01/1999 | 11/80 |(Seminar)</string>
     <string name="event3">Example event | Example club | 03/01/1999 | 13/40 | (Turkish)</string>
     <string name="event4">Example event | Example club | 04/01/1999 | 9/40 | (zoom)</string>
+    <string name="Email">Email</string>
 
 </resources>
