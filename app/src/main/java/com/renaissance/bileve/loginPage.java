@@ -23,7 +23,6 @@ public class loginPage extends AppCompatActivity {
                 //whenever the button is clicked it executes the homePage method
                 homePage();
             }
-
         });
     }
 
