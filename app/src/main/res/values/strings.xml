@@ -7,6 +7,7 @@
     <string name="password">Password:</string>
     <string name="settings">Settings:</string>
     <string name="welcome">Welcome to Bilkent Events!</string>
+    <string name="login">Login</string>
 
     //create account
     <string name="createAccount">create a new account</string>
@@ -32,5 +33,11 @@
     <string name="username">Username:</string>
     <string name="userID">12345678</string>
     <string name="userPassword">********</string>
+
+    //exampleEvents
+    <string name="event1">Example event | Example club | 01/01/1999 | 10/120 | (GE 250/1 included)</string>
+    <string name="event2">Example event | Example club | 02/01/1999 | 11/80 |(Seminar)</string>
+    <string name="event3">Example event | Example club | 03/01/1999 | 13/40 | (Turkish)</string>
+    <string name="event4">Example event | Example club | 04/01/1999 | 9/40 | (zoom)</string>
 
 </resources>
