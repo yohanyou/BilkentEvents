@@ -11,4 +11,6 @@ public class eventOrganizer extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.event_organizer);
     }
+
+    //public //
 }

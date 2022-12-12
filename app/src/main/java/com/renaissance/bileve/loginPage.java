@@ -31,6 +31,8 @@ public class loginPage extends AppCompatActivity {
         Intent intent = new Intent(this, homePage.class);
         //changes from this Activity to the homePage class
         startActivity(intent);
+
+
     }
 
 }
