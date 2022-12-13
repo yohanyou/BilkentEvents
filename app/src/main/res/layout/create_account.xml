@@ -26,7 +26,7 @@
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:ems="10"
-        android:hint="@string/bilkentID"
+        android:hint="@string/email"
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,12 +36,12 @@
         app:layout_constraintVertical_bias="0.371" />
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/bilkentID"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:ems="10"
-        android:hint="@string/email"
-        android:inputType="textPassword"
+        android:hint="@string/bilkentID"
+        android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
