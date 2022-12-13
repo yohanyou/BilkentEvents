@@ -4,35 +4,48 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 public class loginPage extends AppCompatActivity {
-
+    EditText email, password;
+    Button login;
+    DBHelper DB;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
 
-        //creates a button and then attaches it to the login button
-        Button button = (Button) findViewById(R.id.login);
-        //sets an on on click listener to this button
-        button.setOnClickListener(new View.OnClickListener(){
+        email =findViewById(R.id.email1);
+        password= findViewById(R.id.password1);
+        login = findViewById(R.id.login);
+        DB= new DBHelper(this);
+
+        login.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
-                //whenever the button is clicked it executes the homePage method
-                homePage();
+            public void onClick(View v) {
+                String em= email.getText().toString();
+                String pass = password.getText().toString();
+
+                if (TextUtils.isEmpty(em) || TextUtils.isEmpty(pass)){
+                    Toast.makeText(loginPage.this,"All fields Required", Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    Boolean checkemailpass = DB.checkemailpassword(em,pass);
+                    if (checkemailpass==true){
+                        Toast.makeText(loginPage.this,"Login Successful", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(getApplicationContext(),homePage.class);
+                        startActivity(intent);
+                    }else{
+                        Toast.makeText(loginPage.this,"Login Failed", Toast.LENGTH_SHORT).show();
+                    }
+                }
             }
         });
-    }
-
-    public void homePage(){
-        //creates a new intent
-        Intent intent = new Intent(this, homePage.class);
-        //changes from this Activity to the homePage class
-        startActivity(intent);
-
-
     }
 
 }

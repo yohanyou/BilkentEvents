@@ -23,6 +23,7 @@
         <activity android:name=".createAccount"
             android:exported="true">
             <intent-filter>
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
