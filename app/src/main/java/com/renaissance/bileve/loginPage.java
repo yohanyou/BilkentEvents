@@ -16,7 +16,7 @@ public class loginPage extends AppCompatActivity {
     EditText email, password;
     Button login;
     DBHelper DB;
-    TextView createaccount;
+    TextView createaccount,forgot_password;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,11 +26,19 @@ public class loginPage extends AppCompatActivity {
         password= findViewById(R.id.password1);
         login = findViewById(R.id.login);
         createaccount =findViewById(R.id.create_account);
+        forgot_password= findViewById(R.id.forgot_password);
         DB= new DBHelper(this);
         createaccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),createAccount.class);
+                startActivity(intent);
+            }
+        });
+        forgot_password.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),forgetPassword.class);
                 startActivity(intent);
             }
         });
