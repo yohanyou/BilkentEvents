@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="green">#4ac700</color>
+    <!--    <color name="green">#4ac700</color>-->
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
@@ -8,4 +8,13 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- color template for the app design-->
+    <color name="lightbrown">#CB997E</color>
+    <color name="darkbeige">#DDBEA9</color>
+    <color name="beige">#FFE8D6</color>
+    <color name="pastelgreen">#B7B7A4</color>
+    <color name="green">#A5A58D</color>
+    <color name="darkgreen">#6B705C</color>
+
 </resources>
