@@ -109,7 +109,7 @@
         android:layout_height="50dp"
         android:ems="8"
         android:inputType="number"
-        android:text="@string/userID"
+        android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.453"

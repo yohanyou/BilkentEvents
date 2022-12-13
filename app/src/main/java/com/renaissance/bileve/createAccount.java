@@ -22,7 +22,7 @@ public class createAccount extends AppCompatActivity {
         setContentView(R.layout.create_account);
 
         email = findViewById(R.id.email);
-        password = findViewById(R.id.password);
+        password = findViewById(R.id.bilkentID);
         login = findViewById(R.id.signup);
         turnback = findViewById(R.id.turnback);
         DB = new DBHelper(this);
