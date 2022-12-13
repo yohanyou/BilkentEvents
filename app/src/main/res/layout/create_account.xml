@@ -65,7 +65,7 @@
         android:id="@+id/turnback"
         android:layout_width="205dp"
         android:layout_height="53dp"
-        android:text="Login Page"
+        android:text="@string/loginPage"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
