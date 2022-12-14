@@ -14,7 +14,6 @@
             android:name=".loginPage"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -28,6 +27,7 @@
             </intent-filter>
         </activity>
 
+
         <!--declaring the intent for forgetPassword-->
         <activity android:name=".forgetPassword"
             android:exported="true">
@@ -35,6 +35,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
 
         <!--declaring the intent for homePage-->
         <activity android:name=".homePage"
@@ -56,6 +57,14 @@
         <activity android:name=".settings"
             android:exported="true">
             <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".changePassword"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
