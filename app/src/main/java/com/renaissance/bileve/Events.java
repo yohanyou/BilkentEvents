@@ -26,6 +26,7 @@ public class Events {
         this.date = date;
         this.location = location;
         this.maxCapacity = maxCapacity;
+        createEventList();
     }
 
     
@@ -73,9 +74,19 @@ public class Events {
             return 1;
         else return -1;
     }
+    
     public void createEventList()
     {
         events.add(new Events(eventName, clubName, date, location, maxCapacity));
     }
+
+    public void ListEvvents()
+    {
+        for(int i=0;i<events.size();i++){
+            Events a = events.get(i);
+            System.out.println(a.eventName+a.clubName+a.date+a.location+maxCapacity);
+        }
+    }
+
 
 }
