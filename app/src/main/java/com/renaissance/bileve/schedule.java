@@ -5,14 +5,16 @@ public class schedule {
     String clubName;
     String date;
     String location;
+    String language;
     int maxCapacity;
 
     //creating an event
-    public schedule(String eventName, String clubName, String date,String location,int maxCapacity){
+    public schedule(String eventName, String clubName, String date,String location, String language,int maxCapacity){
         this.eventName=eventName;
         this.clubName=clubName;
         this.date=date;
         this.location=location;
+        this.language=language;
         this.maxCapacity=maxCapacity;
     }
 
@@ -30,6 +32,9 @@ public class schedule {
     public String getLocation(){
         return this.location;
     }
+    public String getLanguage(){
+        return this.language;
+    }
     public int getMaxCapacity(){
         return this.maxCapacity;
     }
@@ -45,6 +50,7 @@ public class schedule {
         int otherDay = Integer.parseInt(aschedule.date.substring(0,2));
         int otherMonth = Integer.parseInt(aschedule.date.substring(2,4));
         int otherYear = Integer.parseInt("22" + aschedule.date.substring(4));
+
         if(year==otherYear&&month==otherMonth&&day==otherDay)
             return 1;
         else return -1;
