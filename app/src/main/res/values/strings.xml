@@ -43,4 +43,10 @@
     <string name="event4">Example event | Example club | 04/01/1999 | 9/40 | (zoom)</string>
     <string name="Email">Email</string>
 
+    <!--    change password-->
+    <string name="change_password">Change your password:</string>
+    <string name="oldPassword">Old Password</string>
+    <string name="newPassword">New Password</string>
+    <string name="confirmPassword">Confirm Password</string>
+
 </resources>
