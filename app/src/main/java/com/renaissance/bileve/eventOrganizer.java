@@ -12,5 +12,8 @@ public class eventOrganizer extends AppCompatActivity {
         setContentView(R.layout.event_organizer);
     }
 
-    //public //
+
+    
+    
+
 }
