@@ -59,6 +59,20 @@ public class Events {
      * This method will be used in User class to create events and store them in the ArrayList of Events
      * Information from DataBase will be stored with different method and stored in the constructor shown above
      */
+
+    public int compareTo(Events aschedule){
+        int day = Integer.parseInt(this.date.substring(0,2));
+        int month = Integer.parseInt(this.date.substring(3,5));
+        int year = Integer.parseInt("22" + this.date.substring(6));
+
+        int otherDay = Integer.parseInt(aschedule.date.substring(0,2));
+        int otherMonth = Integer.parseInt(aschedule.date.substring(3,5));
+        int otherYear = Integer.parseInt("22" + aschedule.date.substring(6));
+
+        if(year==otherYear&&month==otherMonth&&day==otherDay)
+            return 1;
+        else return -1;
+    }
     public void createEventList()
     {
         events.add(new Events(eventName, clubName, date, location, maxCapacity));
