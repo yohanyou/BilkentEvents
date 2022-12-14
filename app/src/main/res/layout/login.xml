@@ -24,12 +24,12 @@
         app:layout_constraintVertical_bias="0.2" />
 
     <EditText
-        android:id="@+id/email1"
+        android:id="@+id/password1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="14"
         android:fontFamily="@font/lato_regular"
-        android:hint="@string/email"
+        android:hint="@string/bilkentID"
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,7 +40,7 @@
         android:autofillHints="@string/exampleEmail" />
 
     <EditText
-        android:id="@+id/password1"
+        android:id="@+id/email1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/lato_regular"

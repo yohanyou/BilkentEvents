@@ -23,36 +23,34 @@
         app:layout_constraintVertical_bias="0.2" />
 
     <EditText
-        android:id="@+id/email"
+        android:id="@+id/passwordCreate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:autofillHints="@string/exampleEmail"
+        android:autofillHints="@string/password"
         android:ems="14"
         android:fontFamily="@font/lato_regular"
-        android:hint="@string/email"
-        android:inputType="textEmailAddress"
+        android:hint="@string/password"
+        android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.35" />
+        app:layout_constraintVertical_bias="0.457" />
 
     <EditText
         android:id="@+id/bilkentID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:autofillHints="@string/userID"
         android:ems="14"
         android:fontFamily="@font/lato_regular"
         android:hint="@string/bilkentID"
         android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.45"
-        android:autofillHints="@string/userID" />
+        app:layout_constraintVertical_bias="0.368" />
 
     <Button
         android:id="@+id/signup"

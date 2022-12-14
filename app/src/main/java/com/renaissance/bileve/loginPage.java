@@ -52,8 +52,8 @@ public class loginPage extends AppCompatActivity {
                     Toast.makeText(loginPage.this,"All fields Required", Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    Boolean checkemailpass = DB.checkemailpassword(em,pass);
-                    if (checkemailpass==true){
+                    Boolean checkbilIDpass = DB.checkbilkentIDpassword(em,pass);
+                    if (checkbilIDpass==true){
                         Toast.makeText(loginPage.this,"Login Successful", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(getApplicationContext(),homePage.class);
                         startActivity(intent);
