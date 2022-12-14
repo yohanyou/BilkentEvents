@@ -33,4 +33,20 @@ public class schedule {
     public int getMaxCapacity(){
         return this.maxCapacity;
     }
+
+    /*checking whether events' dates are same or not
+    dates should be added as dd/mm/yy
+    if dates are same method will return 1; otherwise -1;
+    */
+    public int compareTo(schedule aschedule){
+        int day = Integer.parseInt(this.date.substring(0,2));
+        int month = Integer.parseInt(this.date.substring(2,4));
+        int year = Integer.parseInt("22" + this.date.substring(4));
+        int otherDay = Integer.parseInt(aschedule.date.substring(0,2));
+        int otherMonth = Integer.parseInt(aschedule.date.substring(2,4));
+        int otherYear = Integer.parseInt("22" + aschedule.date.substring(4));
+        if(year==otherYear&&month==otherMonth&&day==otherDay)
+            return 1;
+        else return -1;
+    }
 }
