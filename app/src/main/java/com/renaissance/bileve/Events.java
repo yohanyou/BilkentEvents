@@ -104,8 +104,8 @@ public class Events {
             Events a = events.get(i);
             //TextView textView = (TextView)....
             //the text
-            textView.setText(a.eventName);
-            textView.append(a.clubName+a.time+a.date+a.location+maxCapacity);
+            //textView.setText(a.eventName);
+            //textView.append(a.clubName+a.time+a.date+a.location+maxCapacity);
         }
     }
 }
