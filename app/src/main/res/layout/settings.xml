@@ -20,7 +20,7 @@
         app:layout_constraintVertical_bias="0.14" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/homeButton"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:adjustViewBounds="true"
@@ -132,7 +132,7 @@
         app:layout_constraintVertical_bias="0.182" />
 
     <TextView
-        android:id="@+id/create_account"
+        android:id="@+id/settingsChangePassword"
         android:layout_width="131dp"
         android:layout_height="24dp"
         android:gravity="left"
@@ -146,7 +146,7 @@
         app:layout_constraintVertical_bias="0.292" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/logoutButton"
         android:layout_width="125dp"
         android:layout_height="50dp"
         android:text="@string/logout"
