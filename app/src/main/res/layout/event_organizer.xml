@@ -65,6 +65,7 @@
         app:srcCompat="@drawable/setting"
         android:contentDescription="@string/settings" />
 
+
     <TextView
         android:id="@+id/box0"
         android:layout_width="350dp"
@@ -72,11 +73,10 @@
         android:background="@drawable/box"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.557"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.173" />
-
 
     <TextView
         android:id="@+id/box1"
@@ -85,7 +85,7 @@
         android:background="@drawable/box"
         app:layout_constraintBottom_toBottomOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.459"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />

@@ -35,12 +35,6 @@ public class loginPage extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        createaccount.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
         forgot_password.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

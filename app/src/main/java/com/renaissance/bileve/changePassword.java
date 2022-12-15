@@ -1,15 +1,18 @@
 package com.renaissance.bileve;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class changePassword extends AppCompatActivity {
     EditText oldPassword, createPassword, newPasswordConfirm;
+    ImageButton backButton;
     Button passwordChangeButton;
     DBHelper DB;
     @Override
@@ -21,6 +24,7 @@ public class changePassword extends AppCompatActivity {
         createPassword= findViewById(R.id.createPassword);
         newPasswordConfirm= findViewById(R.id.newPasswordConfirm);
         passwordChangeButton=findViewById(R.id.passwordChangeButton);
+        backButton=findViewById(R.id.settingsBack);
         DB = new DBHelper(this);
 
         passwordChangeButton.setOnClickListener(new View.OnClickListener() {
@@ -38,13 +42,16 @@ public class changePassword extends AppCompatActivity {
                 if (createPass.equals(newPass) && !createPass.isEmpty() && !newPass.isEmpty()){
                     Toast.makeText(changePassword.this, "Your password changed",Toast.LENGTH_SHORT).show();
                 }
-                if ()
+//                if ()
             }
         });
 
-
-
-
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),settings.class);
+                startActivity(intent);
+            }
+        });
     }
-
 }
