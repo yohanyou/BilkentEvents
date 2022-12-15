@@ -52,6 +52,13 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".Events"
+            android:exported="true">
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <!--declaring the intent for settings-->
         <activity android:name=".settings"
             android:exported="true">
