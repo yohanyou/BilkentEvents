@@ -11,8 +11,12 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class changePassword extends AppCompatActivity {
+<<<<<<< Updated upstream
     EditText oldPassword, createPassword, newPasswordConfirm;
     ImageButton backButton;
+=======
+    EditText bilID, createPassword, newPasswordConfirm;
+>>>>>>> Stashed changes
     Button passwordChangeButton;
     DBHelper DB;
     @Override
@@ -20,7 +24,7 @@ public class changePassword extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.change_password);
 
-        oldPassword= findViewById(R.id.oldPassword);
+        bilID= findViewById(R.id.bilIDChangePassword);
         createPassword= findViewById(R.id.createPassword);
         newPasswordConfirm= findViewById(R.id.newPasswordConfirm);
         passwordChangeButton=findViewById(R.id.passwordChangeButton);
@@ -30,20 +34,32 @@ public class changePassword extends AppCompatActivity {
         passwordChangeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String oldPass = oldPassword.getText().toString();
+                String bilkentIDChagePassword = bilID.getText().toString();
                 String createPass= createPassword.getText().toString();
                 String newPass= newPasswordConfirm.getText().toString();
-                if (oldPass.isEmpty()||createPass.isEmpty()||newPass.isEmpty()){
-                        Toast.makeText(changePassword.this, "You have to fill all of them",Toast.LENGTH_SHORT).show();
+                if (createPass.equals(newPass)) {
+                    Boolean checkUser = DB.checkbilkentID(bilkentIDChagePassword);
+                    Boolean checkPasswordUpdate = DB.updatepassword(bilkentIDChagePassword, newPass);
+                    if (checkPasswordUpdate == true) {
+                        Intent intent = new Intent(getApplicationContext(), loginPage.class);
+                        startActivity(intent);
+                        Toast.makeText(changePassword.this, "Password Updated Successfully", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(changePassword.this, "Password Not Updated", Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    Toast.makeText(changePassword.this, "Passwords Do Not Match", Toast.LENGTH_SHORT).show();
                 }
-                if (!createPass.equals(newPass)){
-                    Toast.makeText(changePassword.this, "Your new passwords do not match",Toast.LENGTH_SHORT).show();
                 }
+<<<<<<< Updated upstream
                 if (createPass.equals(newPass) && !createPass.isEmpty() && !newPass.isEmpty()){
                     Toast.makeText(changePassword.this, "Your password changed",Toast.LENGTH_SHORT).show();
                 }
 //                if ()
             }
+=======
+
+>>>>>>> Stashed changes
         });
 
         backButton.setOnClickListener(new View.OnClickListener() {
