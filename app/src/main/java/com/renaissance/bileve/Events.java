@@ -2,7 +2,17 @@ package com.renaissance.bileve;
 
 
 
+import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
+
+import android.os.Bundle;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
@@ -11,79 +21,75 @@ import java.util.ArrayList;
 // This class will get the Events from the DataBase and save it into the ArrayList
 // DataBase implementation will be introduced later on.
 
-public class Events {
-    
+public class Events extends AppCompatActivity {
+
     String eventName;
     String clubName;
     String date;
     String time;
-    String location; 
+    String location;
     int maxCapacity;
     ArrayList<String> eventList;
     ArrayList<Events> events; //
 
-    public Events(String eventName, String clubName, String time, String date, String location, int maxCapacity)
-    {
+
+    public Events(String eventName, String clubName, String time, String date, String location, int maxCapacity) {
         this.eventName = eventName;
         this.clubName = clubName;
-        this.time=time;
+        this.time = time;
         this.date = date;
         this.location = location;
         this.maxCapacity = maxCapacity;
         createEventList();
+
     }
 
-    
-    public String getEventName()
-    {
+
+
+    public String getEventName() {
         return this.eventName;
     }
 
-    public String getClubName()
-    {
+    public String getClubName() {
         return this.clubName;
     }
 
-    public String getTime()
-    {
+    public String getTime() {
         return this.time;
     }
 
-    public String getDate()
-    {
+    public String getDate() {
         return this.date;
     }
 
-    public String getLocation()
-    {
+    public String getLocation() {
         return this.location;
     }
 
-    public int getCapacity()
-    {
+    public int getCapacity() {
         return this.maxCapacity;
     }
 
     /*
-    * comparing day, month, year, time
-    * data should be added such as dd/mm/yy :day/month/year
-    * time should be added as hh/mm : hour/minute
-    * */
+     * comparing day, month, year, time
+     * data should be added such as dd/mm/yy :day/month/year
+     * time should be added as hh/mm : hour/minute
+     * */
 
-    public int compareTo(Events aschedule){
-        int day = Integer.parseInt(this.date.substring(0,2));
-        int month = Integer.parseInt(this.date.substring(3,5));
+    public int compareTo(Events aschedule) {
+        int day = Integer.parseInt(this.date.substring(0, 2));
+        int month = Integer.parseInt(this.date.substring(3, 5));
         int year = Integer.parseInt("22" + this.date.substring(6));
-        int hour = Integer.parseInt(this.time.substring(0,2));
-        int minute = Integer.parseInt(this.time.substring(3,5));
+        int hour = Integer.parseInt(this.time.substring(0, 2));
+        int minute = Integer.parseInt(this.time.substring(3, 5));
 
-        int otherDay = Integer.parseInt(aschedule.date.substring(0,2));
-        int otherMonth = Integer.parseInt(aschedule.date.substring(3,5));
+        int otherDay = Integer.parseInt(aschedule.date.substring(0, 2));
+        int otherMonth = Integer.parseInt(aschedule.date.substring(3, 5));
         int otherYear = Integer.parseInt("22" + aschedule.date.substring(6));
-        int otherHour = Integer.parseInt(aschedule.time.substring(0,2));
-        int otherMinute = Integer.parseInt(aschedule.time.substring(3,5));
+        int otherHour = Integer.parseInt(aschedule.time.substring(0, 2));
+        int otherMinute = Integer.parseInt(aschedule.time.substring(3, 5));
 
-        if(day==otherDay && minute==otherMinute && hour==otherHour && month==otherMonth && year==otherYear)
+        if (day == otherDay && minute == otherMinute && hour == otherHour && month == otherMonth && year == otherYear)
             return 1;
         else return -1;
     }
@@ -93,19 +99,52 @@ public class Events {
      * Information from DataBase will be stored with different method and stored in the constructor shown above
      */
 
-    public void createEventList()
-    {
+    public void createEventList() {
         events.add(new Events(eventName, clubName, time, date, location, maxCapacity));
     }
 
-    public void ListEvvents()
-    {
-        for(int i=0;i<events.size();i++){
+    public void ListEvvents() {
+        for (int i = 0; i < events.size(); i++) {
             Events a = events.get(i);
-            //TextView textView = (TextView)....
-            //the text
-            //textView.setText(a.eventName);
-            //textView.append(a.clubName+a.time+a.date+a.location+maxCapacity);
+
         }
+
     }
+
+    public void list()
+    {
+        try {
+            TextView txt = (TextView) findViewById(R.id.box2);
+
+            StringBuilder text = new StringBuilder();
+            Log.d(TAG, "onCreate: " + events.size());
+            // Using SB  to keep every single events lists and appending them
+            for(int i = 0; events.size() > i; i++)
+            {
+                text.append(events.get(i).getEventName());
+                text.append(events.get(i).getCapacity());
+                text.append("\n");
+
+            }
+            txt.setText(text);
+        }
+        finally {
+
+        }
+
+
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.event_organizer);
+
+
+
+
+    }
+
+
+
 }

@@ -9,8 +9,14 @@ public class eventOrganizer extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.event_organizer);
+        setContentView(R.layout.events);
     }
+
+
+    boolean isConflicts;
+
+
+    
 
 
 }
