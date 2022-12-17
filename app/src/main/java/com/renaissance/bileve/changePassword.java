@@ -14,6 +14,10 @@ public class changePassword extends AppCompatActivity {
 <<<<<<< Updated upstream
     EditText oldPassword, createPassword, newPasswordConfirm;
     ImageButton backButton;
+<<<<<<< Updated upstream
+=======
+    EditText bilID, createPassword, newPasswordConfirm;
+>>>>>>> Stashed changes
 =======
     EditText bilID, createPassword, newPasswordConfirm;
 >>>>>>> Stashed changes
@@ -57,6 +61,10 @@ public class changePassword extends AppCompatActivity {
                 }
 //                if ()
             }
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 =======
 
 >>>>>>> Stashed changes
