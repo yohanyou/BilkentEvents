@@ -48,5 +48,11 @@
     <string name="oldPassword">Old Password</string>
     <string name="newPassword">New Password</string>
     <string name="confirmPassword">Confirm Password</string>
+    <string name="time">Time</string>
+    <string name="clubname">clubName</string>
+    <string name="date">Date</string>
+    <string name="eventname">EventName</string>
+    <string name="capacity">Capacity</string>
+    <string name="location">Location</string>
 
 </resources>
