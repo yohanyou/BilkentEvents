@@ -52,7 +52,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Events"
+        <activity android:name=".User"
             android:exported="true">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
