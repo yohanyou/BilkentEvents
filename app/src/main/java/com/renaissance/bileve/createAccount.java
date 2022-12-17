@@ -26,7 +26,7 @@ public class createAccount extends AppCompatActivity {
         email = findViewById(R.id.passwordCreate);
         password = findViewById(R.id.bilkentID);
         login = findViewById(R.id.signup);
-        turnback = findViewById(R.id.turnback);
+
         DB = new DBHelper(this);
 
         turnback.setOnClickListener(new View.OnClickListener() {

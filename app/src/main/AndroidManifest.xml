@@ -14,7 +14,7 @@
             android:name=".loginPage"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -23,7 +23,7 @@
         <activity android:name=".createAccount"
             android:exported="true">
             <intent-filter>
-
+                <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -46,15 +46,9 @@
             </intent-filter>
         </activity>
 
-        <!--declaring the intent for eventOrganizer-->
-        <activity android:name=".eventOrganizer"
-            android:exported="true">
-            <intent-filter>
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
 
-        <activity android:name=".User"
+
+        <activity android:name=".intro"
             android:exported="true">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
