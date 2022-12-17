@@ -9,17 +9,26 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class homePage extends AppCompatActivity {
-    TextView logout1;
+    TextView logout1,applyt;
     ImageButton settings, eventApply;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_page);
 
+        applyt = findViewById(R.id.applyText);
 
 
         //creates a button-listener for the settings button
         settings = findViewById(R.id.settings);
+        applyt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), create_events.class);
+                startActivity(intent);
+            }
+        });
+
         settings.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {

@@ -5,22 +5,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class changePassword extends AppCompatActivity {
-<<<<<<< Updated upstream
-    EditText oldPassword, createPassword, newPasswordConfirm;
-    ImageButton backButton;
-<<<<<<< Updated upstream
-=======
     EditText bilID, createPassword, newPasswordConfirm;
->>>>>>> Stashed changes
-=======
-    EditText bilID, createPassword, newPasswordConfirm;
->>>>>>> Stashed changes
     Button passwordChangeButton;
     DBHelper DB;
     @Override
@@ -32,7 +22,6 @@ public class changePassword extends AppCompatActivity {
         createPassword= findViewById(R.id.createPassword);
         newPasswordConfirm= findViewById(R.id.newPasswordConfirm);
         passwordChangeButton=findViewById(R.id.passwordChangeButton);
-        backButton=findViewById(R.id.settingsBack);
         DB = new DBHelper(this);
 
         passwordChangeButton.setOnClickListener(new View.OnClickListener() {
@@ -54,28 +43,13 @@ public class changePassword extends AppCompatActivity {
                 } else {
                     Toast.makeText(changePassword.this, "Passwords Do Not Match", Toast.LENGTH_SHORT).show();
                 }
-                }
-<<<<<<< Updated upstream
-                if (createPass.equals(newPass) && !createPass.isEmpty() && !newPass.isEmpty()){
-                    Toast.makeText(changePassword.this, "Your password changed",Toast.LENGTH_SHORT).show();
-                }
-//                if ()
             }
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
-=======
-
->>>>>>> Stashed changes
         });
 
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),settings.class);
-                startActivity(intent);
-            }
-        });
+
+
+
     }
+
 }
