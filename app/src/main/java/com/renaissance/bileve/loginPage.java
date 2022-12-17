@@ -55,7 +55,7 @@ public class loginPage extends AppCompatActivity {
                     //checkbilIDpass = DB.checkbilkentIDpassword(em,pass);
                     if (true){
                         Toast.makeText(loginPage.this,"Login Successful", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(getApplicationContext(),homePage.class);
+                        Intent intent = new Intent(getApplicationContext(),create_events.class);
                         startActivity(intent);
                     }else{
                         Toast.makeText(loginPage.this,"Login Failed", Toast.LENGTH_SHORT).show();
