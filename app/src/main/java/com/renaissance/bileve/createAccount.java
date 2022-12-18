@@ -16,7 +16,6 @@ import android.widget.Toast;
 public class createAccount extends AppCompatActivity {
     EditText email,password;
     Button login;
-    ImageButton turnback;
     DBHelper DB;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,13 +28,6 @@ public class createAccount extends AppCompatActivity {
 
         DB = new DBHelper(this);
 
-        turnback.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),loginPage.class);
-                startActivity(intent);
-            }
-        });
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
