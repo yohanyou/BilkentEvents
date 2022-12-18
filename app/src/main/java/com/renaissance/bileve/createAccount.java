@@ -21,7 +21,6 @@ public class createAccount extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.create_account);
-
         email = findViewById(R.id.passwordCreate);
         password = findViewById(R.id.bilkentID);
         login = findViewById(R.id.signup);
@@ -43,7 +42,7 @@ public class createAccount extends AppCompatActivity {
                         Boolean insert = DB.insertData(pass,em);
                         if (insert==true){
                             Toast.makeText(createAccount.this, "Registered Successfully",Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(getApplicationContext(),homePage.class);
+                            Intent intent = new Intent(getApplicationContext(),loginPage.class);
                             startActivity(intent);
                         }else{
                             Toast.makeText(createAccount.this, "User Already Exists",Toast.LENGTH_SHORT).show();
