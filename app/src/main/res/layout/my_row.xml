@@ -8,11 +8,13 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        >
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/greyz"
             android:padding="12dp">
 
             <TextView
@@ -78,14 +80,6 @@
                 app:layout_constraintStart_toEndOf="@+id/event_id_txt"
                 app:layout_constraintTop_toTopOf="@+id/event_id_txt"
                 app:layout_constraintVertical_bias="1.0" />
-
-            <ImageButton
-                android:id="@+id/imageButton2"
-                android:layout_width="30dp"
-                android:layout_height="27dp"
-                app:srcCompat="@drawable/ic_baseline_add_task_24"
-                tools:layout_editor_absoluteX="319dp"
-                tools:layout_editor_absoluteY="52dp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

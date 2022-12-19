@@ -18,10 +18,10 @@ public class changePassword extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.change_password);
 
-        bilID= findViewById(R.id.bilIDChangePassword);
-        createPassword= findViewById(R.id.createPassword);
-        newPasswordConfirm= findViewById(R.id.newPasswordConfirm);
-        passwordChangeButton=findViewById(R.id.passwordChangeButton);
+        bilID= findViewById(R.id.event_title);
+        createPassword= findViewById(R.id.event_date);
+        newPasswordConfirm= findViewById(R.id.event_location);
+        passwordChangeButton=findViewById(R.id.add_button);
         DB = new DBHelper(this);
 
         passwordChangeButton.setOnClickListener(new View.OnClickListener() {
