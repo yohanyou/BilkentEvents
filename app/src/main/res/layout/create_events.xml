@@ -44,20 +44,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Log Out"
-            android:textSize="10dp" />
+            android:textSize="10sp" />
 
         <Button
             android:id="@+id/homToSettings"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="10dp"
+            android:textSize="10sp"
             android:text="Settings" />
 
         <Button
             android:id="@+id/toHomePage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="10dp"
+            android:textSize="10sp"
             android:text="Home Page" />
     </LinearLayout>
 
