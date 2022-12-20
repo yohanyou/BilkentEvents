@@ -16,16 +16,18 @@ public class Register extends AppCompatActivity {
     Button register;
     TextView namex, idx, datex, locx, langx;
 
-    String name = getIntent().getStringExtra("name");
-    String id = getIntent().getStringExtra("id");
-    String lang = getIntent().getStringExtra("lang");
-    String date = getIntent().getStringExtra("date");
-    String loc = getIntent().getStringExtra("loc");
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+
+        String name = getIntent().getStringExtra("name");
+        String id = getIntent().getStringExtra("id");
+        String lang = getIntent().getStringExtra("lang");
+        String date = getIntent().getStringExtra("date");
+        String loc = getIntent().getStringExtra("loc");
 
         homePage = findViewById(R.id.homeButton);
         backArrow = findViewById(R.id.backArrow);
