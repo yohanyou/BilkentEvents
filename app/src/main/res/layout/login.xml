@@ -81,7 +81,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:text="Forget Your Password? Recovery it"
+            android:background="@null"
+            android:text="@string/forget_your_password_recovery_it"
+            android:textSize="12sp"
             android:textAlignment="viewStart"
             android:textColor="#4d4d4d" />
 
