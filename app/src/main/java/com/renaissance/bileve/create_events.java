@@ -29,11 +29,8 @@ public class create_events extends AppCompatActivity implements RecyclerViewInte
     CustomAdapter customAdapter;
     SearchView searchView;
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> master
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -121,7 +118,6 @@ public class create_events extends AppCompatActivity implements RecyclerViewInte
             }
         }
     }
-<<<<<<< HEAD
 
     /**
      * We are taking the position of the event and displaying the details after clicking
@@ -142,6 +138,5 @@ public class create_events extends AppCompatActivity implements RecyclerViewInte
 
 
     }
-=======
->>>>>>> master
+
 }
