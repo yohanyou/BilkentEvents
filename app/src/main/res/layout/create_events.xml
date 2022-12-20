@@ -25,7 +25,10 @@
             android:background="@drawable/search_view_bg"
             app:queryHint="Search Here..."
             app:iconifiedByDefault="false"
-            />
+            >
+
+
+        </androidx.appcompat.widget.SearchView>
 
 
 
@@ -35,6 +38,27 @@
             android:layout_height="wrap_content" >
 
         </androidx.recyclerview.widget.RecyclerView>
+
+        <Button
+            android:id="@+id/logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Log Out"
+            android:textSize="10dp" />
+
+        <Button
+            android:id="@+id/homToSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="10dp"
+            android:text="Settings" />
+
+        <Button
+            android:id="@+id/toHomePage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="10dp"
+            android:text="Home Page" />
     </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

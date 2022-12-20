@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,6 +20,9 @@ public class create_events extends AppCompatActivity {
 
     RecyclerView recyclerView;
     FloatingActionButton add_button;
+    Button LogOut;
+    Button toHome;
+    Button toSettings;
 
     MyDatabaseHelper myDB;
     ArrayList<String> event_id, event_title, event_lang, event_date, event_loc;
@@ -29,7 +33,30 @@ public class create_events extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.create_events);
-
+        toHome=findViewById(R.id.toHomePage);
+        toHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(create_events.this, homePage.class);
+                startActivity(intent);
+            }
+        });
+        toSettings=findViewById(R.id.homToSettings);
+        toSettings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(create_events.this,settings.class);
+                startActivity(intent);
+            }
+        });
+    LogOut=findViewById(R.id.logout);
+    LogOut.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(create_events.this,loginPage.class);
+            startActivity(intent);
+        }
+    });
         searchView=findViewById(R.id.searchView);
         searchView.clearFocus();
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
