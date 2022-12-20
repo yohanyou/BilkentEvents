@@ -29,19 +29,12 @@ public class create_events extends AppCompatActivity implements RecyclerViewInte
     CustomAdapter customAdapter;
     SearchView searchView;
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> master
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.create_events);
 
 
-
-        searchView=findViewById(R.id.searchView);
+        searchView = findViewById(R.id.searchView);
         searchView.clearFocus();
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
@@ -56,14 +49,11 @@ public class create_events extends AppCompatActivity implements RecyclerViewInte
             }
         });
 
-        recyclerView =findViewById(R.id.recyclerView);
+        recyclerView = findViewById(R.id.recyclerView);
         add_button = findViewById(R.id.floatingActionButton);
-        add_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), add_events.class);
-                startActivity(intent);
-            }
+        add_button.setOnClickListener(v -> {
+            Intent intent = new Intent(getApplicationContext(), add_events.class);
+            startActivity(intent);
         });
 
         myDB = new MyDatabaseHelper(create_events.this);
@@ -75,7 +65,7 @@ public class create_events extends AppCompatActivity implements RecyclerViewInte
 
         storeDataInArrays();
 
-        customAdapter = new CustomAdapter(create_events.this, event_id, event_title, event_lang, event_date, event_loc,this);
+        customAdapter = new CustomAdapter(create_events.this, event_id, event_title, event_lang, event_date, event_loc, this);
         recyclerView.setAdapter(customAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(create_events.this));
 
@@ -107,12 +97,12 @@ public class create_events extends AppCompatActivity implements RecyclerViewInte
          */
     }
 
-    void storeDataInArrays(){
+    void storeDataInArrays() {
         Cursor cursor = myDB.readAllData();
-        if (cursor.getCount() ==0 ){
-            Toast.makeText(this, "No Data",Toast.LENGTH_SHORT).show();
-        }else{
-            while (cursor.moveToNext()){
+        if (cursor.getCount() == 0) {
+            Toast.makeText(this, "No Data", Toast.LENGTH_SHORT).show();
+        } else {
+            while (cursor.moveToNext()) {
                 event_id.add(cursor.getString(0));
                 event_title.add(cursor.getString(1));
                 event_lang.add(cursor.getString(2));
@@ -121,10 +111,10 @@ public class create_events extends AppCompatActivity implements RecyclerViewInte
             }
         }
     }
-<<<<<<< HEAD
 
     /**
      * We are taking the position of the event and displaying the details after clicking
+     *
      * @param position
      */
     @Override
@@ -142,6 +132,4 @@ public class create_events extends AppCompatActivity implements RecyclerViewInte
 
 
     }
-=======
->>>>>>> master
 }

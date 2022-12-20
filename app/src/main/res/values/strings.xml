@@ -2,14 +2,16 @@
 
     <!--general purposes-->
     <string name="appName">BilkentEvents</string>
-    <string name="bilkentID">Bilkent ID:</string>
-    <string name="email">Email:</string>
-    <string name="exampleEmail">example@ug.bilkent.edu.tr</string>
-    <string name="password">Password:</string>
-    <string name="settings">Settings:</string>
-    <string name="welcome">Welcome to Bilkent Events!</string>
-    <string name="login">Login</string>
-    <string name="loginPage">Login Page</string>
+        <string name="bilkentID">Bilkent ID:</string>
+        <string name="email">Email:</string>
+        <string name="exampleEmail">example@ug.bilkent.edu.tr</string>
+        <string name="password">Password:</string>
+        <string name="settings">Settings:</string>
+
+        <string name="welcome">Welcome to Bilkent Events!</string>
+        <string name="login">Login</string>
+        <string name="loginPage">Login Page</string>
+        <string name="register">register</string>
 
     <!--create account-->
     <string name="createAccount">create a new account</string>
@@ -36,23 +38,28 @@
     <string name="userID">11222333</string>
     <string name="userPassword">********</string>
 
-    <!--example events-->
-    <string name="event1">Example event | Example club | 01/01/1999 | 10/120 | (GE 250/1 included)</string>
-    <string name="event2">Example event | Example club | 02/01/1999 | 11/80 |(Seminar)</string>
-    <string name="event3">Example event | Example club | 03/01/1999 | 13/40 | (Turkish)</string>
-    <string name="event4">Example event | Example club | 04/01/1999 | 9/40 | (zoom)</string>
-    <string name="Email">Email</string>
+        <!--edited versions-->
+        <string name="eventID">event ID</string>
+        <string name="eventName">event name</string>
+        <string name="eventLocation">event location</string>
+        <string name="eventDate">event date</string>
+        <string name="eventLang">event language</string>
+
+        <!--display versions-->
+        <string name="id">ID: </string>
+        <string name="nameOfEvent">Event name:</string>
+        <string name="location">Location: </string>
+        <string name="date">Date:</string>
+        <string name="language">Language: </string>
 
     <!--    change password-->
     <string name="change_password">Change your password:</string>
     <string name="oldPassword">Old Password</string>
     <string name="newPassword">New Password</string>
     <string name="confirmPassword">Confirm Password</string>
-    <string name="time">Time</string>
-    <string name="clubname">clubName</string>
-    <string name="date">Date</string>
-    <string name="eventname">EventName</string>
-    <string name="capacity">Capacity</string>
-    <string name="location">Location</string>
+    <string name="backgroundImage">background</string>
+    <!--    <string name="clubname">Club name:</string>-->
+    <!--    <string name="capacity">Capacity: </string>-->
+    <!--        <string name="time">Time: </string>-->
 
 </resources>
