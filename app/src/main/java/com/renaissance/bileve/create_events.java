@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,20 +16,23 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
-public class create_events extends AppCompatActivity {
+public class create_events extends AppCompatActivity implements RecyclerViewInterface {
 
     RecyclerView recyclerView;
     FloatingActionButton add_button;
-
     MyDatabaseHelper myDB;
     ArrayList<String> event_id, event_title, event_lang, event_date, event_loc;
     CustomAdapter customAdapter;
     SearchView searchView;
-    
+
+
+
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.create_events);
+
+
 
         searchView=findViewById(R.id.searchView);
         searchView.clearFocus();
@@ -63,7 +67,7 @@ public class create_events extends AppCompatActivity {
 
         storeDataInArrays();
 
-        customAdapter = new CustomAdapter(create_events.this, event_id, event_title, event_lang, event_date, event_loc);
+        customAdapter = new CustomAdapter(create_events.this, event_id, event_title, event_lang, event_date, event_loc,this);
         recyclerView.setAdapter(customAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(create_events.this));
 
@@ -88,4 +92,23 @@ public class create_events extends AppCompatActivity {
         }
     }
 
+    /**
+     * We are taking the position of the event and displaying the details after clicking
+     * @param position
+     */
+    @Override
+    public void onItemClick(int position) {
+
+        Intent intent = new Intent(create_events.this, Register.class);
+        intent.putExtra("name", event_title.get(position));
+        intent.putExtra("id", event_id.get(position));
+        intent.putExtra("lang", event_lang.get(position));
+        intent.putExtra("date", event_date.get(position));
+        intent.putExtra("loc", event_loc.get(position));
+
+        startActivity(intent);
+        //event_id, event_title, event_lang, event_date, event_loc;
+
+
+    }
 }
