@@ -28,11 +28,43 @@ public class create_events extends AppCompatActivity implements RecyclerViewInte
     //customadapter customFilteredAdapter
     CustomAdapter customAdapter;
     SearchView searchView;
+<<<<<<< HEAD
+=======
+    Button toHome;
+    Button toSEttings;
+    Button toLogOut;
+
+
+
+>>>>>>> origin/master
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.create_events);
-
+        toLogOut=findViewById(R.id.logout);
+        toLogOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(create_events.this,loginPage.class);
+                startActivity(intent);
+            }
+        });
+        toSEttings=findViewById(R.id.homToSettings);
+        toSEttings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(create_events.this,settings.class);
+                startActivity(intent);
+            }
+        });
+toHome=findViewById(R.id.toHomePage);
+toHome.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        Intent intent=new Intent(create_events.this,homePage.class);
+        startActivity(intent);
+    }
+});
 
         searchView = findViewById(R.id.searchView);
         searchView.clearFocus();
@@ -132,4 +164,9 @@ public class create_events extends AppCompatActivity implements RecyclerViewInte
 
 
     }
+<<<<<<< HEAD
 }
+=======
+
+}
+>>>>>>> origin/master
