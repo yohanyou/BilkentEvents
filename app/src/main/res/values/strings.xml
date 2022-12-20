@@ -3,13 +3,24 @@
     <!--general purposes-->
     <string name="appName">BilkentEvents</string>
     <string name="bilkentID">Bilkent ID:</string>
+    <string name="exampleID">11222333</string>
     <string name="email">Email:</string>
     <string name="exampleEmail">example@ug.bilkent.edu.tr</string>
     <string name="password">Password:</string>
     <string name="settings">Settings:</string>
     <string name="welcome">Welcome to Bilkent Events!</string>
-    <string name="login">Login</string>
+    <string name="login">LOGIN</string>
     <string name="loginPage">Login Page</string>
+    <string name="loginToAccount">login to account</string>
+    <string name="loginWith">or login with</string>
+    <string name="google">Google</string>
+    <string name="facebook">Facebook</string>
+
+    <!--intro-->
+    <string name="clickToStart">Click to start the Bilkent Events app</string>
+    <string name="getStarted">GET STARTED</string>
+    <string name="contentDescription">a picture of a man with a light bulb</string>
+    <string name="contentDescription2">background image for the login</string>
 
     <!--create account-->
     <string name="createAccount">create a new account</string>
