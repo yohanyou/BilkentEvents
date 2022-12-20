@@ -24,6 +24,7 @@ public class create_events extends AppCompatActivity {
     ArrayList<String> event_id, event_title, event_lang, event_date, event_loc;
     CustomAdapter customAdapter;
     SearchView searchView;
+    
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
