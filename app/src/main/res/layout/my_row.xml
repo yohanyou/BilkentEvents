@@ -15,7 +15,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/greyz"
-            android:padding="12dp">
+            android:padding="13dp"
+            android:rotationX="0"
+            android:rotationY="0">
 
             <TextView
                 android:id="@+id/event_id_txt"

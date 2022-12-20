@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -22,11 +23,26 @@ public class create_events extends AppCompatActivity {
     MyDatabaseHelper myDB;
     ArrayList<String> event_id, event_title, event_lang, event_date, event_loc;
     CustomAdapter customAdapter;
+    SearchView searchView;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.create_events);
 
+        searchView=findViewById(R.id.searchView);
+        searchView.clearFocus();
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                filterList(newText);
+                return true;
+            }
+        });
         recyclerView =findViewById(R.id.recyclerView);
         add_button = findViewById(R.id.floatingActionButton);
         add_button.setOnClickListener(new View.OnClickListener() {
@@ -49,6 +65,10 @@ public class create_events extends AppCompatActivity {
         customAdapter = new CustomAdapter(create_events.this, event_id, event_title, event_lang, event_date, event_loc);
         recyclerView.setAdapter(customAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(create_events.this));
+
+    }
+
+    private void filterList(String text) {
 
     }
 
