@@ -15,48 +15,32 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
-public class create_events extends AppCompatActivity {
+public class create_events extends AppCompatActivity implements RecyclerViewInterface {
 
     RecyclerView recyclerView;
     FloatingActionButton add_button;
-    Button LogOut;
-    Button toHome;
-    Button toSettings;
-
     MyDatabaseHelper myDB;
     ArrayList<String> event_id, event_title, event_lang, event_date, event_loc;
+    //ArrayList<String>filteredId, filteredTitle, filteredLang, filteredDate, filteredLoc;
+    //int indexNo, increment;
+    //customadapter customFilteredAdapter
     CustomAdapter customAdapter;
     SearchView searchView;
-    
+
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> master
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.create_events);
-        toHome=findViewById(R.id.toHomePage);
-        toHome.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(create_events.this, homePage.class);
-                startActivity(intent);
-            }
-        });
-        toSettings=findViewById(R.id.homToSettings);
-        toSettings.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(create_events.this,settings.class);
-                startActivity(intent);
-            }
-        });
-    LogOut=findViewById(R.id.logout);
-    LogOut.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            Intent intent = new Intent(create_events.this,loginPage.class);
-            startActivity(intent);
-        }
-    });
+
+
+
         searchView=findViewById(R.id.searchView);
         searchView.clearFocus();
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
@@ -71,6 +55,7 @@ public class create_events extends AppCompatActivity {
                 return true;
             }
         });
+
         recyclerView =findViewById(R.id.recyclerView);
         add_button = findViewById(R.id.floatingActionButton);
         add_button.setOnClickListener(new View.OnClickListener() {
@@ -90,14 +75,36 @@ public class create_events extends AppCompatActivity {
 
         storeDataInArrays();
 
-        customAdapter = new CustomAdapter(create_events.this, event_id, event_title, event_lang, event_date, event_loc);
+        customAdapter = new CustomAdapter(create_events.this, event_id, event_title, event_lang, event_date, event_loc,this);
         recyclerView.setAdapter(customAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(create_events.this));
 
     }
 
     private void filterList(String text) {
+        /*
+        filteredId = new ArrayList<>();
+        filteredTitle = new ArrayList<>();
+        filteredLang = new ArrayList<>();
+        filteredDate = new ArrayList<>();
+        filteredLoc = new ArrayList<>();
+        increment = 0;
 
+        for (String filter : event_date) {
+            if (filter.equals(text)) {
+                indexNo = event_date.indexOf(filter);
+                filteredId.set(increment, event_id.get(indexNo));
+                filteredTitle.set(increment, event_title.get(indexNo));
+                filteredLang.set(increment, event_lang.get(indexNo));
+                filteredLoc.set(increment, event_loc.get(indexNo));
+                increment++;
+            }
+        }
+
+        customFilteredAdapter = new CustomAdapter(create_events.this, filteredId, filteredTitle, filteredLang, filteredDate, filteredLoc);
+        recyclerView.setAdapter(customFilteredAdapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(create_events.this));
+         */
     }
 
     void storeDataInArrays(){
@@ -114,5 +121,27 @@ public class create_events extends AppCompatActivity {
             }
         }
     }
+<<<<<<< HEAD
 
+    /**
+     * We are taking the position of the event and displaying the details after clicking
+     * @param position
+     */
+    @Override
+    public void onItemClick(int position) {
+
+        Intent intent = new Intent(create_events.this, Register.class);
+        intent.putExtra("name", event_title.get(position));
+        intent.putExtra("id", event_id.get(position));
+        intent.putExtra("lang", event_lang.get(position));
+        intent.putExtra("date", event_date.get(position));
+        intent.putExtra("loc", event_loc.get(position));
+
+        startActivity(intent);
+        //event_id, event_title, event_lang, event_date, event_loc;
+
+
+    }
+=======
+>>>>>>> master
 }
