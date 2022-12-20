@@ -2,15 +2,29 @@ package com.renaissance.bileve;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class Register extends AppCompatActivity {
+Button REgToHome;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_register);
+
+        REgToHome=findViewById(R.id.registerToHome);
+        REgToHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(Register.this,homePage.class);
+                startActivity(intent);
+            }
+        });
 
         String name = getIntent().getStringExtra("name");
         String id = getIntent().getStringExtra("id");
