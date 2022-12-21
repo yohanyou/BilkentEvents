@@ -7,14 +7,36 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
 
 public class homePage extends AppCompatActivity {
     TextView logout1,applyt;
     ImageButton settings, eventApply;
+
+    RecyclerView recyclerView;
+    Schedule customAdapter;
+    Register r = new Register();
+    ArrayList<Schedule> sch = r.getList();
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_page);
+
+
+        recyclerView = findViewById(R.id.recyclerView2);
+
+
+        //    public Schedule(String id, String title, String lang, String date, String loc)
+
+        customAdapter = new Schedule(this, "4", "6", "6", "5", "5");
+        recyclerView.setAdapter(customAdapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(homePage.this));
+
 
         applyt = findViewById(R.id.applyText);
 
@@ -56,6 +78,13 @@ public class homePage extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
+
+
+
+
+
     }
 
 }

@@ -1,7 +1,9 @@
 package com.renaissance.bileve;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -18,7 +20,10 @@ public class Register extends AppCompatActivity {
     Button register;
     TextView namex, idx, datex, locx, langx;
     Button button;
+    Context context;
     ArrayList<Schedule> schedule = new ArrayList<>();
+
+
 
 
 
@@ -35,6 +40,9 @@ public class Register extends AppCompatActivity {
 
 
 
+
+
+
         button = findViewById(R.id.registerButton);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,7 +51,7 @@ public class Register extends AppCompatActivity {
                 int i = 0;
 
                 if(schedule.isEmpty()){
-                    schedule.add(new Schedule(name,date));
+                    schedule.add(new Schedule(context, id,name,lang, date, loc));
                     Toast.makeText(getApplicationContext(), "Registered to the first activity!", Toast.LENGTH_SHORT).show();
                 }
 
@@ -56,7 +64,7 @@ public class Register extends AppCompatActivity {
                         }
                     }
                     if (i > schedule.size()) {
-                        schedule.add(new Schedule(name, date));
+                        schedule.add(new Schedule(context, id,name,lang, date, loc));
                         Toast.makeText(getApplicationContext(), "Registered to the new activity!", Toast.LENGTH_SHORT).show();
                     }
                     else {
@@ -115,6 +123,11 @@ public class Register extends AppCompatActivity {
         {
             return false;
         }
+    }
+
+    public ArrayList<Schedule> getList() {
+
+        return schedule;
     }
 
 }
