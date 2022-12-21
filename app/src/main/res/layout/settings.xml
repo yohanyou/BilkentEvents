@@ -10,7 +10,7 @@
         android:id="@+id/settingUsername2"
         android:layout_width="100dp"
         android:layout_height="25dp"
-        android:text="@string/password"
+        android:text="Secret PW"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -156,6 +156,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.304" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save Secret Password"
+        tools:layout_editor_absoluteX="194dp"
+        tools:layout_editor_absoluteY="265dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
