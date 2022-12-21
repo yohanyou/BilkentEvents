@@ -15,7 +15,6 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 public class Register extends AppCompatActivity {
-    ImageButton homePage, backArrow;
     Button register;
     TextView namex, idx, datex, locx, langx;
     Button button;
@@ -86,20 +85,6 @@ public class Register extends AppCompatActivity {
         });
 
 
-
-
-        homePage = findViewById(R.id.homeButton);
-        backArrow = findViewById(R.id.backArrow);
-
-        homePage.setOnClickListener(view -> {
-            Intent intent = new Intent(getApplicationContext(), homePage.class);
-            startActivity(intent);
-        });
-
-        backArrow.setOnClickListener(view -> {
-            Intent intent = new Intent(getApplicationContext(), create_events.class);
-            startActivity(intent);
-        });
 
 
 
