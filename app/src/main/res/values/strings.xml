@@ -58,6 +58,8 @@
     <string name="newPassword">New Password</string>
     <string name="confirmPassword">Confirm Password</string>
     <string name="backgroundImage">background</string>
+    <string name="forget_your_password_recovery_it">Forget Your Password? Recovery it</string>
+    <string name="bilkent_id">Bilkent ID:</string>
     <!--    <string name="clubname">Club name:</string>-->
     <!--    <string name="capacity">Capacity: </string>-->
     <!--        <string name="time">Time: </string>-->

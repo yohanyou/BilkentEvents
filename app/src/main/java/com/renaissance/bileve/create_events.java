@@ -5,6 +5,7 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -29,8 +30,8 @@ public class create_events extends AppCompatActivity implements RecyclerViewInte
     CustomAdapter customAdapter;
     SearchView searchView;
 
-    Button toHome;
-    Button toSettings;
+    ImageButton toHome;
+    ImageButton toSettings;
     Button toLogOut;
 
 
