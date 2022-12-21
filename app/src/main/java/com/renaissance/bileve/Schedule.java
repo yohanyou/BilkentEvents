@@ -1,6 +1,8 @@
 package com.renaissance.bileve;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
@@ -10,12 +12,13 @@ public class Schedule extends AppCompatActivity {
 
     String name;
     String day;
-    ArrayList<Schedule> schedule;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_schedule);
+
     }
 
     public Schedule(String name, String day)
@@ -33,15 +36,9 @@ public class Schedule extends AppCompatActivity {
         return this.name;
     }
 
-    public void keepArray(String name, String time)
-    {
-        schedule.add(new Schedule(name, time));
-    }
 
-    public ArrayList<Schedule> getList()
-    {
-        return schedule;
-    }
+
+
 
     // We will have a schedule object to keep the details of the registered schedule.
     // for adding next events

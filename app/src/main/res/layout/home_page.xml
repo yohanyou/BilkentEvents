@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".homePage">
+    tools:context=".homePage"
+    android:background="@color/beige">
 
     <TextView
         android:id="@+id/textView5"
@@ -74,7 +75,9 @@
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.285" />
+        app:layout_constraintVertical_bias="0.285"
+
+    />
 
     <TextView
         android:id="@+id/todaysDate"
@@ -140,6 +143,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.336" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="52dp"
+        android:layout_height="200dp"
+        tools:layout_editor_absoluteX="58dp"
+        tools:layout_editor_absoluteY="157dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
