@@ -33,7 +33,7 @@ public class homePage extends AppCompatActivity {
 
         //    public Schedule(String id, String title, String lang, String date, String loc)
 
-        customAdapter = new Schedule(this, "4", "6", "6", "5", "5");
+        customAdapter = new Schedule(this, "1", "Career Fair", "ENG", "21/12/2022", "N building");
         recyclerView.setAdapter(customAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(homePage.this));
 
