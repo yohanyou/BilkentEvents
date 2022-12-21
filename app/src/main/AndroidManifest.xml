@@ -9,13 +9,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BilkentEvents">
         <activity
-            android:name=".Register"
+            android:name=".Schedule"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <!-- declaring the intent for loginPage -->
+        <activity
+            android:name=".Register"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity> <!-- declaring the intent for loginPage -->
         <activity
             android:name=".loginPage"
             android:exported="true">

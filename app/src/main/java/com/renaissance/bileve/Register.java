@@ -10,11 +10,16 @@ import android.widget.ImageButton;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
 
 public class Register extends AppCompatActivity {
     ImageButton homePage, backArrow;
     Button register;
     TextView namex, idx, datex, locx, langx;
+    Button button;
+    ArrayList<Schedule> schedule = new ArrayList<>();
 
 
 
@@ -29,9 +34,62 @@ public class Register extends AppCompatActivity {
         String date = getIntent().getStringExtra("date");
         String loc = getIntent().getStringExtra("loc");
 
+
+
+        button = findViewById(R.id.registerButton);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                int i = 0;
+
+                if(schedule.isEmpty()){
+                    schedule.add(new Schedule(name,date));
+                    Toast.makeText(getApplicationContext(), "Registered to the first activity!", Toast.LENGTH_SHORT).show();
+                }
+
+                else {
+                    for (int b = 0; schedule.size() > b; b++) {
+
+                        if (!schedule.get(b).getTime().equals(date)) {
+                            i++;
+                            // 1dene obje var// eger arrayda yoxdusa artir, varsa artirma
+                        }
+                    }
+                    if (i > schedule.size()) {
+                        schedule.add(new Schedule(name, date));
+                        Toast.makeText(getApplicationContext(), "Registered to the new activity!", Toast.LENGTH_SHORT).show();
+                    }
+                    else {
+
+                        int c = 0;
+                        for (int b = 0; schedule.size() > b; b++) {
+
+                            if (schedule.get(b).getTime().equals(date) && schedule.get(b).getName().equals(name)) {
+                                c++; // eger
+                            }
+                        }
+                        if (c > 0) {
+                            Toast.makeText(getApplicationContext(), "Already Registered to the new activity!", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                }
+
+
+
+
+
+
+
+            }
+
+        });
+
+
+
+
         homePage = findViewById(R.id.homeButton);
         backArrow = findViewById(R.id.backArrow);
-        register = findViewById(R.id.registerButton);
 
         homePage.setOnClickListener(view -> {
             Intent intent = new Intent(getApplicationContext(), homePage.class);
@@ -43,10 +101,7 @@ public class Register extends AppCompatActivity {
             startActivity(intent);
         });
 
-        register.setOnClickListener(view -> {
-            Intent intent = new Intent(getApplicationContext(), create_events.class);
-            startActivity(intent);
-        });
+
 
         namex = findViewById(R.id.EventName);
         namex.setText(name);
@@ -63,6 +118,18 @@ public class Register extends AppCompatActivity {
         langx = findViewById(R.id.EventLanguage);
         langx.setText(lang);
 
-
     }
+
+    public boolean equals (Object o) {
+        Schedule x = (Schedule) o;
+        if(o instanceof Schedule)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
 }

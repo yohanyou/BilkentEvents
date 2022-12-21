@@ -159,6 +159,7 @@ public class create_events extends AppCompatActivity implements RecyclerViewInte
         startActivity(intent);
         //event_id, event_title, event_lang, event_date, event_loc;
 
-
     }
+
+
 }
