@@ -54,6 +54,7 @@
             android:name=".intro"
             android:exported="true">
             <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity> <!-- declaring the intent for settings -->
@@ -75,7 +76,6 @@
             android:name=".create_events"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
