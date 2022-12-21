@@ -4,17 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< Updated upstream
     android:background="@drawable/background_page"
     tools:context=".homePage">
+=======
+    tools:context=".homePage"
+    android:background="@color/beige">
+>>>>>>> Stashed changes
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="350dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="11dp"
-        android:layout_marginBottom="116dp"
+        android:layout_height="50dp"
         android:background="@drawable/box"
-        app:layout_constraintBottom_toTopOf="@+id/recyclerView2"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,6 +55,23 @@
         app:layout_constraintVertical_bias="0.081"
         app:srcCompat="@drawable/setting" />
 
+<<<<<<< Updated upstream
+=======
+    <TextView
+        android:id="@+id/box"
+        android:layout_width="350dp"
+        android:layout_height="500dp"
+        android:background="@drawable/box"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.285"
+
+    />
+
+>>>>>>> Stashed changes
     <TextView
         android:id="@+id/todaysDate"
         android:layout_width="wrap_content"
@@ -119,6 +139,7 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView2"
+<<<<<<< Updated upstream
         android:layout_width="397dp"
         android:layout_height="540dp"
         android:layout_marginTop="4dp"
@@ -126,6 +147,12 @@
         app:layout_constraintHorizontal_bias="0.571"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/exampleEvents" />
+=======
+        android:layout_width="52dp"
+        android:layout_height="200dp"
+        tools:layout_editor_absoluteX="58dp"
+        tools:layout_editor_absoluteY="157dp" />
+>>>>>>> Stashed changes
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
