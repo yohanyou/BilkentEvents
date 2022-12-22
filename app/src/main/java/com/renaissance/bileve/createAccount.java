@@ -1,5 +1,7 @@
 package com.renaissance.bileve;
-
+/*
+We create UI of CreateAccount and store the information on Database accordingly.
+ */
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -22,12 +24,13 @@ public class createAccount extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.create_account);
+
+        // initialization of events
         email = findViewById(R.id.passwordCreate);
         password = findViewById(R.id.bilkentID);
         login = findViewById(R.id.signup);
 
         ImageView b1;
-
 
         DB = new DBHelper(this);
 
@@ -41,6 +44,7 @@ public class createAccount extends AppCompatActivity {
         });
 
 
+        // Checks whether this User is already registered or not. Also requires to fill all the tables
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

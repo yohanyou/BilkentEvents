@@ -1,5 +1,9 @@
 package com.renaissance.bileve;
+/*
 
+This class gets information from the user and checks the SecretPassword of every Client and changes password.
+
+ */
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;

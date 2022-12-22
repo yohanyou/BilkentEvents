@@ -1,5 +1,8 @@
 package com.renaissance.bileve;
+/*
+This class is used mainly as Schedule. Users can see their registered events and apply for the new events.
 
+ */
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;

@@ -1,5 +1,7 @@
 package com.renaissance.bileve;
-
+/*
+This class Changes the password by requiring new Pass from the Client. Then information is changed in Database and stored in Local Database
+ */
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;

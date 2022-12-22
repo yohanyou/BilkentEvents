@@ -1,4 +1,8 @@
 package com.renaissance.bileve;
+/*
+This class shows the created events by the admin. For displaying we are using Adapter class of AndroidStudio and send data's accordingly
+We get information from Database and use them in Adapter object for visibility.
+ */
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -73,7 +77,6 @@ public class Events extends AppCompatActivity implements RecyclerViewInterface {
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                filterList(newText);
                 return true;
             }
         });
@@ -85,6 +88,8 @@ public class Events extends AppCompatActivity implements RecyclerViewInterface {
             startActivity(intent);
         });
 
+        // getting information from the database
+
         myDB = new MyDatabaseHelper(Events.this);
         event_id = new ArrayList<>();
         event_title = new ArrayList<>();
@@ -92,7 +97,9 @@ public class Events extends AppCompatActivity implements RecyclerViewInterface {
         event_date = new ArrayList<>();
         event_loc = new ArrayList<>();
 
-        storeDataInArrays();
+        storeDataInArrays(); // storing information in arrays by extracting from Database
+
+        // creating adapter object by getting Event paramaters and sending to RecyclerView to display
 
         customAdapter = new CustomAdapter(Events.this, event_id, event_title, event_lang, event_date, event_loc, this);
         recyclerView.setAdapter(customAdapter);
@@ -100,32 +107,11 @@ public class Events extends AppCompatActivity implements RecyclerViewInterface {
 
     }
 
-    private void filterList(String text) {
-        /*
-        filteredId = new ArrayList<>();
-        filteredTitle = new ArrayList<>();
-        filteredLang = new ArrayList<>();
-        filteredDate = new ArrayList<>();
-        filteredLoc = new ArrayList<>();
-        increment = 0;
 
-        for (String filter : event_date) {
-            if (filter.equals(text)) {
-                indexNo = event_date.indexOf(filter);
-                filteredId.set(increment, event_id.get(indexNo));
-                filteredTitle.set(increment, event_title.get(indexNo));
-                filteredLang.set(increment, event_lang.get(indexNo));
-                filteredLoc.set(increment, event_loc.get(indexNo));
-                increment++;
-            }
-        }
 
-        customFilteredAdapter = new CustomAdapter(create_events.this, filteredId, filteredTitle, filteredLang, filteredDate, filteredLoc);
-        recyclerView.setAdapter(customFilteredAdapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(create_events.this));
-         */
-    }
-
+    /**
+     * Getting the created events from Database and store them in Arrays for using in Adapter class
+     */
     void storeDataInArrays() {
         Cursor cursor = myDB.readAllData();
         if (cursor.getCount() == 0) {
@@ -142,7 +128,8 @@ public class Events extends AppCompatActivity implements RecyclerViewInterface {
     }
 
     /**
-     * We are taking the position of the event and displaying the details after clicking
+     * When clicked on the event it shows the details of the event while registering
+     * Intent class is used to send information for usage
      *
      * @param position
      */
@@ -157,7 +144,6 @@ public class Events extends AppCompatActivity implements RecyclerViewInterface {
         intent.putExtra("loc", event_loc.get(position));
 
         startActivity(intent);
-        //event_id, event_title, event_lang, event_date, event_loc;
 
     }
 

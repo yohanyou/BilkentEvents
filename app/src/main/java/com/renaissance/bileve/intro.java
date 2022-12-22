@@ -1,5 +1,7 @@
 package com.renaissance.bileve;
-
+/*
+This page only creates simple intro for our program.
+ */
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;

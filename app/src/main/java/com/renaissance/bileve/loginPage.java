@@ -1,4 +1,12 @@
 package com.renaissance.bileve;
+/*
+
+This class creates a template code for the simple Login Page. Displays some information measured by the algorithms.
+Uses EditText AndroidUtility to add free text-typo to write and keep written info.
+onClick listener for buttons are used for swapping between the pages and display required message
+
+ */
+
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,6 +20,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class loginPage extends AppCompatActivity {
+
+    // initialization of variables
+
     EditText email, password;
     Button login;
     DBHelper DB;
@@ -25,7 +36,8 @@ public class loginPage extends AppCompatActivity {
         login = findViewById(R.id.login);
         createaccount =findViewById(R.id.create_account);
         forgot_password= findViewById(R.id.forgot_password);
-        DB= new DBHelper(this);
+
+        DB= new DBHelper(this); // sending information to database to store in the local
         createaccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

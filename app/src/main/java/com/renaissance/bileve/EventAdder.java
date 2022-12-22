@@ -1,5 +1,10 @@
 package com.renaissance.bileve;
 
+/*
+This class gets the created event information from the Admin and creates the event accordingly.
+Created event is added to the Local Database and visible for all of the users.
+ */
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -17,6 +22,8 @@ public class EventAdder extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // adding some buttons by using Android functionalities
         setContentView(R.layout.add_events);
         toHome=findViewById(R.id.comeback4);
         toHome.setOnClickListener(new View.OnClickListener() {
@@ -43,6 +50,9 @@ public class EventAdder extends AppCompatActivity {
         addbutton = findViewById(R.id.add_button);
         addbutton.setOnClickListener(new View.OnClickListener() {
             @Override
+            /**
+             * This listener method stores the added object in the Database by using inner Helper Database methods.
+             */
             public void onClick(View v) {
                 MyDatabaseHelper myDB = new MyDatabaseHelper(EventAdder.this);
                 myDB.addEvent(title_input.getText().toString().trim(),language_input.getText().toString().trim(),date_input.getText().toString().trim(),location_input.getText().toString().trim());

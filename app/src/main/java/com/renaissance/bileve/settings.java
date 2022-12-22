@@ -1,4 +1,10 @@
 package com.renaissance.bileve;
+/*
+Purpose of this class is to keep the ID, Username and SecretPassword of the Client.
+Clients can store their SecretPassword and Change their passwords with the relation of Database
+onClick listener for buttons are used for swapping between the pages and display required message
+ */
+
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,15 +20,14 @@ public class settings extends AppCompatActivity {
     ImageButton homeButton;
     TextView changePassword;
 
-    //unnecessary code but i have no idea who wrote this so it'll stay
-    //    loginPage logp = new loginPage();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings);
 
-        homeButton = findViewById(R.id.homeButton);
-        homeButton.setOnClickListener(new View.OnClickListener() {
+        homeButton = findViewById(R.id.homeButton); // assigning buttons
+        homeButton.setOnClickListener(new View.OnClickListener() { // using method to swap pages
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),homePage.class);
