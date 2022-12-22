@@ -16,7 +16,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".Register"
+            android:name=".RegisterEvents"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -73,14 +73,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".create_events"
+            android:name=".Events"
             android:exported="true">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".add_events"
+            android:name=".EventAdder"
             android:exported="true">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />

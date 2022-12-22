@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,11 +15,11 @@ import java.util.ArrayList;
 
 public class homePage extends AppCompatActivity {
     TextView logout1,applyt;
-    ImageButton settings, eventApply;
+    ImageButton eventApply;
 
     RecyclerView recyclerView;
     Schedule customAdapter;
-    Register r = new Register();
+    RegisterEvents r = new RegisterEvents();
     ArrayList<Schedule> sch = r.getList();
 
 
@@ -42,14 +43,17 @@ public class homePage extends AppCompatActivity {
 
 
         //creates a button-listener for the settings button
-        settings = findViewById(R.id.settings);
+
         applyt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), create_events.class);
+                Intent intent = new Intent(getApplicationContext(), Events.class);
                 startActivity(intent);
             }
         });
+
+        ImageView settings;
+        settings = findViewById(R.id.settings);
 
         settings.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -64,7 +68,7 @@ public class homePage extends AppCompatActivity {
         eventApply.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), create_events.class);
+                Intent intent = new Intent(getApplicationContext(), Events.class);
                 startActivity(intent);
             }
         });

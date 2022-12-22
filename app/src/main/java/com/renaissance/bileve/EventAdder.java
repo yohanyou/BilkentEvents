@@ -9,7 +9,7 @@ import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class add_events extends AppCompatActivity {
+public class EventAdder extends AppCompatActivity {
 
     EditText title_input, language_input, date_input, location_input ;
     Button addbutton;
@@ -22,7 +22,7 @@ public class add_events extends AppCompatActivity {
         toHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(add_events.this, homePage.class);
+                Intent intent = new Intent(EventAdder.this, homePage.class);
                 startActivity(intent);
             }
         });
@@ -31,7 +31,8 @@ public class add_events extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(add_events.this, create_events.class);
+                Intent intent = new Intent(EventAdder.this, Events.class);
+                startActivity(intent);
             }
         });
 
@@ -43,7 +44,7 @@ public class add_events extends AppCompatActivity {
         addbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MyDatabaseHelper myDB = new MyDatabaseHelper(add_events.this);
+                MyDatabaseHelper myDB = new MyDatabaseHelper(EventAdder.this);
                 myDB.addEvent(title_input.getText().toString().trim(),language_input.getText().toString().trim(),date_input.getText().toString().trim(),location_input.getText().toString().trim());
             }
         });

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,9 +17,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
-import java.util.Locale;
 
-public class create_events extends AppCompatActivity implements RecyclerViewInterface {
+public class Events extends AppCompatActivity implements RecyclerViewInterface {
 
     RecyclerView recyclerView;
     FloatingActionButton add_button;
@@ -32,7 +32,7 @@ public class create_events extends AppCompatActivity implements RecyclerViewInte
 
     ImageButton toHome;
     ImageButton toSettings;
-    Button toLogOut;
+    ImageView toLogOut;
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +42,7 @@ public class create_events extends AppCompatActivity implements RecyclerViewInte
         toLogOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(create_events.this, loginPage.class);
+                Intent intent = new Intent(Events.this, loginPage.class);
                 startActivity(intent);
             }
         });
@@ -50,7 +50,7 @@ public class create_events extends AppCompatActivity implements RecyclerViewInte
         toSettings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(create_events.this, settings.class);
+                Intent intent = new Intent(Events.this, settings.class);
                 startActivity(intent);
             }
         });
@@ -58,7 +58,7 @@ public class create_events extends AppCompatActivity implements RecyclerViewInte
         toHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(create_events.this, homePage.class);
+                Intent intent = new Intent(Events.this, homePage.class);
                 startActivity(intent);
             }
         });
@@ -81,11 +81,11 @@ public class create_events extends AppCompatActivity implements RecyclerViewInte
         recyclerView = findViewById(R.id.recyclerView);
         add_button = findViewById(R.id.floatingActionButton);
         add_button.setOnClickListener(v -> {
-            Intent intent = new Intent(getApplicationContext(), add_events.class);
+            Intent intent = new Intent(getApplicationContext(), EventAdder.class);
             startActivity(intent);
         });
 
-        myDB = new MyDatabaseHelper(create_events.this);
+        myDB = new MyDatabaseHelper(Events.this);
         event_id = new ArrayList<>();
         event_title = new ArrayList<>();
         event_lang = new ArrayList<>();
@@ -94,9 +94,9 @@ public class create_events extends AppCompatActivity implements RecyclerViewInte
 
         storeDataInArrays();
 
-        customAdapter = new CustomAdapter(create_events.this, event_id, event_title, event_lang, event_date, event_loc, this);
+        customAdapter = new CustomAdapter(Events.this, event_id, event_title, event_lang, event_date, event_loc, this);
         recyclerView.setAdapter(customAdapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(create_events.this));
+        recyclerView.setLayoutManager(new LinearLayoutManager(Events.this));
 
     }
 
@@ -149,7 +149,7 @@ public class create_events extends AppCompatActivity implements RecyclerViewInte
     @Override
     public void onItemClick(int position) {
 
-        Intent intent = new Intent(create_events.this, Register.class);
+        Intent intent = new Intent(Events.this, RegisterEvents.class);
         intent.putExtra("name", event_title.get(position));
         intent.putExtra("id", event_id.get(position));
         intent.putExtra("lang", event_lang.get(position));

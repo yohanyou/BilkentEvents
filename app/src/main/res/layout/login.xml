@@ -82,10 +82,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:background="@null"
-            android:text="@string/forget_your_password_recovery_it"
-            android:textSize="12sp"
+            android:text="Change Password"
             android:textAlignment="viewStart"
-            android:textColor="#4d4d4d" />
+            android:textColor="#4d4d4d"
+            android:textSize="12sp" />
 
 
 
@@ -183,6 +183,13 @@
             android:layout_marginTop="24dp"
             android:text="Create Account"
             android:textColor="#4d4d4d" />
+
+        <TextView
+            android:id="@+id/forgetPass"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:text="Forget Password"
+            android:textColor="@color/BlueViolet"/>
 
     </LinearLayout>
 

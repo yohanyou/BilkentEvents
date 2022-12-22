@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -34,6 +33,15 @@ public class loginPage extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        TextView forgetPassword = findViewById(R.id.forgetPass);
+        forgetPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(loginPage.this, forgetPassword.class);
+                startActivity(intent);
+            }
+        });
+
         forgot_password.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,7 +62,7 @@ public class loginPage extends AppCompatActivity {
                     //checkbilIDpass = DB.checkbilkentIDpassword(em,pass);
                     if (true){
                         Toast.makeText(loginPage.this,"Login Successful", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(getApplicationContext(),create_events.class);
+                        Intent intent = new Intent(getApplicationContext(), Events.class);
                         startActivity(intent);
                     }else{
                         Toast.makeText(loginPage.this,"Login Failed", Toast.LENGTH_SHORT).show();

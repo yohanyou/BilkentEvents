@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="#0F0F0F"
-    tools:context=".createAccount">
+    android:background="@drawable/background_page"
+    tools:context=".createAccount"
+    >
 
     <LinearLayout
         android:id="@+id/linearLayout5"
@@ -57,14 +58,14 @@
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="589dp" />
 
-    <Button
+    <ImageButton
         android:id="@+id/logout"
         android:layout_width="45dp"
         android:layout_height="30dp"
         android:layout_marginStart="100dp"
         android:layout_marginTop="-8dp"
         android:layout_marginBottom="680dp"
-        android:background="@drawable/grey_button_background"
+        android:background="@drawable/logout"
         android:text="Out"
         android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"

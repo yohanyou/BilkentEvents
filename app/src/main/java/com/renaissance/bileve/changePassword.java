@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,6 +24,16 @@ public class changePassword extends AppCompatActivity {
         newPasswordConfirm= findViewById(R.id.event_location);
         passwordChangeButton=findViewById(R.id.add_button);
         DB = new DBHelper(this);
+
+        ImageView b1 = findViewById(R.id.comeback1);
+        b1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(changePassword.this, loginPage.class);
+                startActivity(intent);
+            }
+        });
+
 
         passwordChangeButton.setOnClickListener(new View.OnClickListener() {
             @Override

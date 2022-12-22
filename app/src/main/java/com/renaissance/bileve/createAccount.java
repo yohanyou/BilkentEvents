@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 
@@ -25,7 +26,19 @@ public class createAccount extends AppCompatActivity {
         password = findViewById(R.id.bilkentID);
         login = findViewById(R.id.signup);
 
+        ImageView b1;
+
+
         DB = new DBHelper(this);
+
+        b1 = findViewById(R.id.comeback);
+        b1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(createAccount.this, loginPage.class);
+                startActivity(intent);
+            }
+        });
 
 
         login.setOnClickListener(new View.OnClickListener() {
