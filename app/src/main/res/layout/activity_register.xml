@@ -28,6 +28,12 @@
         app:layout_constraintStart_toStartOf="parent">
 
 
+        <ImageView
+            android:id="@+id/lastArrow"
+            android:layout_width="371dp"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/back_arrow" />
+
         <TextView
             android:id="@+id/viewID"
             android:layout_width="wrap_content"
