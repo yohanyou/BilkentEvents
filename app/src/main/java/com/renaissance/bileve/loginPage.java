@@ -27,6 +27,8 @@ public class loginPage extends AppCompatActivity {
     Button login;
     DBHelper DB;
     TextView createaccount,forgot_password;
+    int count = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -82,6 +84,21 @@ public class loginPage extends AppCompatActivity {
                 }
             }
         });
+
+
+    }
+    public String getID()
+    {
+        return email.getText().toString();
     }
 
+    public void increaseCount()
+    {
+        count++;
+    }
+
+    public int getCount()
+    {
+        return count;
+    }
 }

@@ -19,9 +19,7 @@ public class RegisterEvents extends AppCompatActivity {
     Button button;
     Context context;
     ArrayList<Schedule> schedule = new ArrayList<>();
-
-
-
+    int i = 0;
 
 
     @Override
@@ -34,7 +32,6 @@ public class RegisterEvents extends AppCompatActivity {
         String lang = getIntent().getStringExtra("lang");
         String date = getIntent().getStringExtra("date");
         String loc = getIntent().getStringExtra("loc");
-
 
 
         ImageView backArrow = findViewById(R.id.lastArrow);
@@ -53,7 +50,6 @@ public class RegisterEvents extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                int i = 0;
 
                 if(schedule.isEmpty()){
                     schedule.add(new Schedule(context, id,name,lang, date, loc));
@@ -65,7 +61,7 @@ public class RegisterEvents extends AppCompatActivity {
 
                         if (!schedule.get(b).getTime().equals(date)) {
                             i++;
-                            // 1dene obje var// eger arrayda yoxdusa artir, varsa artirma
+
                         }
                     }
                     if (i > schedule.size()) {
@@ -86,10 +82,6 @@ public class RegisterEvents extends AppCompatActivity {
                         }
                     }
                 }
-
-
-
-
 
 
 

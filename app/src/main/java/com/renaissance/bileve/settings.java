@@ -19,7 +19,7 @@ public class settings extends AppCompatActivity {
     Button logout;
     ImageButton homeButton;
     TextView changePassword;
-
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

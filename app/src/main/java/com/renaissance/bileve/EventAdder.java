@@ -43,6 +43,7 @@ public class EventAdder extends AppCompatActivity {
             }
         });
 
+        // initializing our data to store in DB later on
         title_input = findViewById(R.id.event_title);
         language_input = findViewById(R.id.event_language);
         date_input = findViewById(R.id.event_date);

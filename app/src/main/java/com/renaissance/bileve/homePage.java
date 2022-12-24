@@ -58,6 +58,7 @@ public class homePage extends AppCompatActivity {
         ImageView settings;
         settings = findViewById(R.id.settings);
 
+        // goes to settings
         settings.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {

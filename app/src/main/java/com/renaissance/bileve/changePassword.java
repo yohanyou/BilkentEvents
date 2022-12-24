@@ -21,6 +21,8 @@ public class changePassword extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.change_password);
 
+        // finding the editable boxes to store information
+
         bilID= findViewById(R.id.event_title);
         createPassword= findViewById(R.id.event_date);
         newPasswordConfirm= findViewById(R.id.event_location);
@@ -43,6 +45,8 @@ public class changePassword extends AppCompatActivity {
                 String bilkentIDChagePassword = bilID.getText().toString();
                 String createPass= createPassword.getText().toString();
                 String newPass= newPasswordConfirm.getText().toString();
+
+                // checking the information by using database and if correct it changes the password of the user ID
                 if (createPass.equals(newPass)) {
                     Boolean checkUser = DB.checkbilkentID(bilkentIDChagePassword);
                     Boolean checkPasswordUpdate = DB.updatepassword(bilkentIDChagePassword, newPass);

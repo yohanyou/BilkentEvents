@@ -51,6 +51,8 @@ public class createAccount extends AppCompatActivity {
                 String em = email.getText().toString();
                 String pass = password.getText().toString();
 
+                // database helper methods called to check id and password
+
                 if (TextUtils.isEmpty(em) || TextUtils.isEmpty(pass))
                     Toast.makeText(createAccount.this,"All fields Required", Toast.LENGTH_SHORT).show();
                 else   {
