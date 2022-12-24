@@ -50,7 +50,7 @@ public class RegisterEvents extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-
+                //checks if the schedule is empty
                 if(schedule.isEmpty()){
                     schedule.add(new Schedule(context, id,name,lang, date, loc));
                     Toast.makeText(getApplicationContext(), "Registered to the first activity!", Toast.LENGTH_SHORT).show();
@@ -58,13 +58,14 @@ public class RegisterEvents extends AppCompatActivity {
 
                 else {
                     for (int b = 0; schedule.size() > b; b++) {
-
+                        //checks for specific time conflicts
                         if (!schedule.get(b).getTime().equals(date)) {
                             i++;
 
                         }
                     }
                     if (i > schedule.size()) {
+                        //adds schedule to the schedule arraylist
                         schedule.add(new Schedule(context, id,name,lang, date, loc));
                         Toast.makeText(getApplicationContext(), "Registered to the new activity!", Toast.LENGTH_SHORT).show();
                     }

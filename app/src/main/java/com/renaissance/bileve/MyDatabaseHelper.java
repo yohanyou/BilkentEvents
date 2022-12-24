@@ -21,12 +21,13 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
     private static final String COLUMN_LOCATION="event_location";
     private static final String COLUMN_DATE="event_date";
 
-
+    //creates a database instance
     public MyDatabaseHelper(Context context) {
         super(context, DATABASE_NAME,null, DATABASE_VERSION);
         this.context = context;
     }
 
+    //adds the specific variables and types
     @Override
     public void onCreate(SQLiteDatabase db) {
         String query ="CREATE TABLE " + TABLE_NAME +
@@ -44,6 +45,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS "+ TABLE_NAME);
         onCreate(db);
     }
+    //adds specific events to the database
     void addEvent(String title, String language, String date, String location){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
@@ -59,6 +61,8 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
             Toast.makeText(context, "Added Successfully",Toast.LENGTH_SHORT).show();
         }
     }
+
+    //reads from the database
     Cursor readAllData(){
        String query= "SELECT * FROM " + TABLE_NAME ;
        SQLiteDatabase db = this.getReadableDatabase();

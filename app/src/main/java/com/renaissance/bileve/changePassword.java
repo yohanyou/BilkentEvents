@@ -38,10 +38,11 @@ public class changePassword extends AppCompatActivity {
             }
         });
 
-
+        //sets an onclicklistener
         passwordChangeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //sets the id, password, and new password to values
                 String bilkentIDChagePassword = bilID.getText().toString();
                 String createPass= createPassword.getText().toString();
                 String newPass= newPasswordConfirm.getText().toString();

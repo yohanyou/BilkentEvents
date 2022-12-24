@@ -12,7 +12,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final  String DBNAME="login.db";
     public DBHelper(Context context) {
         super(context, "login.db", null, 1);
-    } // initiliazing the name
+    } // initializing the name
 
     // creating local database for keeping id and password of the user
     @Override
