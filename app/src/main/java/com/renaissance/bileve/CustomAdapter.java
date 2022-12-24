@@ -24,7 +24,6 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
     private ArrayList<String> event_id, event_title, event_lang, event_date, event_loc;
 
 
-    // Event details are stored in adapter constructor.
     CustomAdapter(Context context, ArrayList event_id,ArrayList event_title,ArrayList event_lang, ArrayList event_date,ArrayList event_loc, RecyclerViewInterface recyclerViewInterface){
         this.context = context;
         this.event_id = event_id;
