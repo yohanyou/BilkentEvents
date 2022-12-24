@@ -87,7 +87,7 @@ public class Events extends AppCompatActivity implements RecyclerViewInterface {
         recyclerView = findViewById(R.id.recyclerView);
         add_button = findViewById(R.id.floatingActionButton);
         add_button.setOnClickListener(v -> {
-            
+
         });
 
         // getting information from the database
