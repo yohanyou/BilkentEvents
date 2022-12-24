@@ -37,8 +37,6 @@ public class Events extends AppCompatActivity implements RecyclerViewInterface {
     ImageButton toHome;
     ImageButton toSettings;
     ImageView toLogOut;
-    loginPage p1 = new loginPage();
-
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,7 +84,8 @@ public class Events extends AppCompatActivity implements RecyclerViewInterface {
         recyclerView = findViewById(R.id.recyclerView);
         add_button = findViewById(R.id.floatingActionButton);
         add_button.setOnClickListener(v -> {
-
+            Intent intent = new Intent(getApplicationContext(), EventAdder.class);
+            startActivity(intent);
         });
 
         // getting information from the database
@@ -107,9 +106,6 @@ public class Events extends AppCompatActivity implements RecyclerViewInterface {
         recyclerView.setLayoutManager(new LinearLayoutManager(Events.this));
 
     }
-
-
-
 
 
 
@@ -150,8 +146,6 @@ public class Events extends AppCompatActivity implements RecyclerViewInterface {
         startActivity(intent);
 
     }
-
-
 
 
 }
