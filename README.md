@@ -1,4 +1,4 @@
-# **Welcome to Bilkent Events!**
+# README
 ## Introduction:
 We, the Renaissance team, wanted to improve Bilkent's SRS system to make it so it is more user-friendly and easier to access.
 We decided to design a mobile application where users can create an account using their Bilkent ID's, and then they will be able to create, access, and apply to certain events.
