@@ -27,9 +27,7 @@ public class loginPage extends AppCompatActivity {
     Button login;
     DBHelper DB;
     TextView createaccount,forgot_password;
-    int count = 0;
-
-    @Override
+    createAccount cAcc = new createAccount();
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
@@ -47,19 +45,12 @@ public class loginPage extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        TextView forgetPassword = findViewById(R.id.forgetPass);
-        forgetPassword.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(loginPage.this, forgetPassword.class);
-                startActivity(intent);
-            }
-        });
+
 
         forgot_password.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(loginPage.this,changePassword.class);
+                Intent intent = new Intent(loginPage.this,forgetPassword.class);
                 startActivity(intent);
             }
         });
@@ -68,7 +59,6 @@ public class loginPage extends AppCompatActivity {
             public void onClick(View v) {
                 String em= email.getText().toString();
                 String pass = password.getText().toString();
-
                 if (TextUtils.isEmpty(em) || TextUtils.isEmpty(pass)){
                     Toast.makeText(loginPage.this,"All fields Required", Toast.LENGTH_SHORT).show();
                 }
@@ -84,21 +74,6 @@ public class loginPage extends AppCompatActivity {
                 }
             }
         });
-
-
-    }
-    public String getID()
-    {
-        return email.getText().toString();
     }
 
-    public void increaseCount()
-    {
-        count++;
-    }
-
-    public int getCount()
-    {
-        return count;
-    }
 }

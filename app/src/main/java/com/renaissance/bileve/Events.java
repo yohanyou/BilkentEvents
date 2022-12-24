@@ -38,7 +38,6 @@ public class Events extends AppCompatActivity implements RecyclerViewInterface {
     ImageButton toSettings;
     ImageView toLogOut;
     loginPage p1 = new loginPage();
-    String p = p1.getID();
 
 
 
